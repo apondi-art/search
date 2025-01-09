@@ -1,0 +1,13 @@
+<!-- web/templates/index.html -->
+{{define "content"}}
+<div class="artist-grid">
+  {{range .}}
+  <div class="artist-card">
+    <a href="/artist/?id={{.Artist.ID}}">
+      <img src="{{.Artist.Image}}" alt="{{.Artist.Name}}" />
+    </a>
+    <h2>{{.Artist.Name}}</h2>
+  </div>
+  {{end}}
+</div>
+{{end}}

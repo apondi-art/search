@@ -1,0 +1,21 @@
+{{define "content"}}
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th> Concert locations</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Locations}}
+            <tr>
+                <td>{{.}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</div>
+<div class="button-card">
+    <button onclick="location.href='/artist/?id={{.ID}}'">Back to Artist Details</button>
+</div>
+{{end}}

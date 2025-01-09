@@ -1,0 +1,22 @@
+{{define "content"}}
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Concert dates</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Dates}}
+            <tr>
+                <td>{{.}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</div>
+<div class="button-card">
+    <button onclick="location.href='/artist/?id={{.ID}}'">Dates</button>
+</div>
+
+{{end}}
